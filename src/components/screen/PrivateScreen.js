@@ -60,7 +60,7 @@ const PrivateScreen = () => {
             <>
                 <div style={{ background: "green", color: "white" }}>{privateData}</div>
                 <button onClick={logoutHandler} className="btn btn-danger">Log Out</button>
-                <ToastContainer />
+                <ToastContainer toastStyle={{ backgroundColor: "green", color: "white" }} />
             </>
 
     )

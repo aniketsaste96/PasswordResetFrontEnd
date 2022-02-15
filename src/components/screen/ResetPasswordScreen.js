@@ -12,6 +12,8 @@ if (typeof window !== "undefined") {
 
 
 const ResetPasswordScreen = ({ match }) => {
+
+    //toastify notification animation
     function notify() {
         toast.success("Password reset Sucessfull 👍,Log In Now!");
     }
@@ -68,9 +70,9 @@ const ResetPasswordScreen = ({ match }) => {
                 className="resetpassword-screen__form"
             >
                 <h3 className="resetpassword-screen__title">Forgot Password</h3>
-                {error && <span className="error-message">{error} </span>}
+                {error && <span className="error-message" style={{ color: "red" }}>{error} </span>}
                 {success && (
-                    <span className="success-message">
+                    <span className="success-message" >
                         {success} <Link to="/login">Login</Link>
 
                     </span>

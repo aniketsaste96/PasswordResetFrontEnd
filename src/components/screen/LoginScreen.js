@@ -72,7 +72,7 @@ const LoginScreen = () => {
         <div className="login-screen" >
             <form className="login-screen__form" onSubmit={loginHandler}>
                 <h3 className="login-screen__title">Login </h3>
-                {error && <span className="error-message">{error}</span>}
+                {error && <span className="error-message" style={{ color: "red" }}>{error}</span>}
                 {() => !error ? notify : error}
 
 
