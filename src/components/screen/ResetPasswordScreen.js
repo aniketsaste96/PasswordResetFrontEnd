@@ -108,7 +108,7 @@ const ResetPasswordScreen = ({ match }) => {
                 </button>
 
             </form>
-            <ToastContainer />
+            <ToastContainer style={{ background: "darkgreen" }} />
         </div>
     );
 };
