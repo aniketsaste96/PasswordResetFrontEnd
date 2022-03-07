@@ -13,6 +13,7 @@ if (typeof window !== "undefined") {
 
 
 const PrivateScreen = () => {
+    //toastify notification
     function notify() {
         toast.success("Hey 😎,Log In Sucessfull!!!");
     }
@@ -66,4 +67,4 @@ const PrivateScreen = () => {
     )
 }
 
-export default PrivateScreen
+export default PrivateScreen;

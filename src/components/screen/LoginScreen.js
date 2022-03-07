@@ -18,6 +18,7 @@ const LoginScreen = () => {
         toast.success("Hey 👋,Log In Sucessfull!");
     }
 
+    //three states are going to change we need three useStates
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
@@ -38,7 +39,9 @@ const LoginScreen = () => {
 
 
     const loginHandler = async (e) => {
+        //avoid defaukt behaviour of form
         e.preventDefault();
+
         const config = {
             headers: {
                 "Content-type": "application/json"
@@ -48,7 +51,7 @@ const LoginScreen = () => {
 
 
         try {
-            const { data } = await axios.post('/api/auth/login', { email, password }, config)
+            const { data } = await axios.post('/api/auth/login', { email, password }, config);
 
             //we will recive  token after we send data
 
@@ -80,7 +83,13 @@ const LoginScreen = () => {
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
                     <br />
-                    <input type="email" required id="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)}
+                    <input
+                        type="email"
+                        required
+                        id="email"
+                        placeholder="Enter Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
 
                         tabIndex={1} />
                 </div>
@@ -105,7 +114,7 @@ const LoginScreen = () => {
 
                 <button type="submit" className="btn btn-primary btn-group"
                     tabIndex={3} id="animate.css"
-                > Login</button>
+                > Login </button>
                 <span className="login-screen__subtext">don't have an account? <Link to="/register">Register</Link> </span>
             </form>
 
@@ -113,4 +122,4 @@ const LoginScreen = () => {
     )
 }
 
-export default LoginScreen
+export default LoginScreen;
