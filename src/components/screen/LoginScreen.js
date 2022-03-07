@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import './LoginScreen.css'
 
 import { injectStyle } from "react-toastify/dist/inject-style";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 // CALL IT ONCE IN YOUR APP
 if (typeof window !== "undefined") {

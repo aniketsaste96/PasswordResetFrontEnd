@@ -1,10 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
-import { useHistory } from 'react-router-dom'
+
 import "./ForgotPasswordScreen.css";
 
 const ForgotPasswordScreen = () => {
-    const history = useHistory()
+
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
