@@ -35,7 +35,7 @@ const RegisterScreen = () => {
 
         try {
             const { data } = await axios.post(
-                "/api/auth/register",
+                "https://passwordresetbackend.herokuapp.com/api/auth/register",
                 {
                     username,
                     email,

@@ -43,7 +43,7 @@ const ResetPasswordScreen = ({ match }) => {
 
         try {
             const { data } = await axios.put(
-                `/api/auth/passwordreset/${match.params.resetToken}`,
+                `https://passwordresetbackend.herokuapp.com/api/auth/passwordreset/${match.params.resetToken}`,
                 {
                     password,
                 },

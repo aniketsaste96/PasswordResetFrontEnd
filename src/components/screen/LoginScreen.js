@@ -51,7 +51,7 @@ const LoginScreen = () => {
 
 
         try {
-            const { data } = await axios.post('/api/auth/login', { email, password }, config);
+            const { data } = await axios.post('https://passwordresetbackend.herokuapp.com/api/auth/login', { email, password }, config);
 
             //we will recive  token after we send data
 
@@ -75,6 +75,10 @@ const LoginScreen = () => {
         <div className="login-screen" >
             <form className="login-screen__form" onSubmit={loginHandler}>
                 <h3 className="login-screen__title">Login </h3>
+                <h5>Email:aniketsaste96@gmail.com</h5>
+                <h5>Password:123456</h5>
+                <i>  <span style={{ 'color': "red" }}>***</span>  send grid account temporarily suspended(for email service) please watch demo below repository </i>
+                <a href="https://github.com/aniketsaste96/PasswordResetFrontEnd" target="_blank">Click Here</a>
                 {error && <span className="error-message" style={{ color: "red" }}>{error}</span>}
                 {() => !error ? notify : error}
 

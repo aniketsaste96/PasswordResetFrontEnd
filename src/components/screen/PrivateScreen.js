@@ -33,7 +33,7 @@ const PrivateScreen = () => {
             }
 
             try {
-                const { data } = await axios.get('/api/private', config)
+                const { data } = await axios.get('https://passwordresetbackend.herokuapp.com/api/private', config)
                 setPrivateData(data.data)
                 console.log(data.data);
                 notify();
