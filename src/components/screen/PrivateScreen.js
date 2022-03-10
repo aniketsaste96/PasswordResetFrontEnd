@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import { injectStyle } from "react-toastify/dist/inject-style";
 import { ToastContainer, toast } from "react-toastify";
-
+import "./PrivateScreen.css"
 // CALL IT ONCE IN YOUR APP
 if (typeof window !== "undefined") {
     injectStyle();
@@ -58,11 +58,14 @@ const PrivateScreen = () => {
 
     return (
         error ? <span className="error-message">{error}</span> :
-            <>
+            <div className="logOutDiv">
                 <div style={{ background: "green", color: "white" }}>{privateData}</div>
-                <button onClick={logoutHandler} className="btn btn-danger">Log Out</button>
+                <div >
+                    <h2>Welcome</h2>
+                    <button onClick={logoutHandler} className="btn btn-danger logoutBtn">Log Out</button>
+                </div>
                 <ToastContainer toastStyle={{ backgroundColor: "green", color: "white" }} />
-            </>
+            </div>
 
     )
 }
